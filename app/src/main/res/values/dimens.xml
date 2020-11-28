@@ -4,4 +4,20 @@
     <dimen name="dim_432_dp">432dp</dimen>
     <dimen name="dim_440_dp">440dp</dimen>
     <dimen name="dim_250_dp">250dp</dimen>
+    <dimen name="dim_30_dp">30dp</dimen>
+    <dimen name="dim_23_sp">23sp</dimen>
+    <dimen name="dim_113_dp">113dp</dimen>
+    <dimen name="dim_83_dp">83dp</dimen>
+    <dimen name="dim_22_dp">22dp</dimen>
+    <dimen name="dim_15_dp">15dp</dimen>
+    <dimen name="dim_18_dp">18dp</dimen>
+    <dimen name="dim_54_dp">54dp</dimen>
+    <dimen name="dim_137_dp">137dp</dimen>
+    <dimen name="dim_27_sp">27sp</dimen>
+    <dimen name="dim_215_dp">215dp</dimen>
+    <dimen name="dim_296_dp">296dp</dimen>
+    <dimen name="dim_15_sp">15sp</dimen>
+    <dimen name="dim_365_dp">365dp</dimen>
+    <dimen name="dim_21_sp">21sp</dimen>
+    <dimen name="sim_24_sp">24sp</dimen>
 </resources>
