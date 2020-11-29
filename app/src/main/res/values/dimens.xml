@@ -20,4 +20,14 @@
     <dimen name="dim_365_dp">365dp</dimen>
     <dimen name="dim_21_sp">21sp</dimen>
     <dimen name="sim_24_sp">24sp</dimen>
+    <dimen name="dim_16_dp">16dp</dimen>
+    <dimen name="dim_200_dp">200dp</dimen>
+    <dimen name="dim_120_dp">120dp</dimen>
+    <dimen name="dim_37_dp">37dp</dimen>
+    <dimen name="dim_0_dp">0dp</dimen>
+    <dimen name="dim_171_dp">171dp</dimen>
+    <dimen name="dim_100_dp">100dp</dimen>
+    <dimen name="dim_27_dp">27dp</dimen>
+    <dimen name="dim_150_dp">150dp</dimen>
+    <dimen name="dim_103_dp">103dp</dimen>
 </resources>

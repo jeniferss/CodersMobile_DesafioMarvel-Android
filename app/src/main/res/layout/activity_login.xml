@@ -92,6 +92,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
+                android:id="@+id/btnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/dim_365_dp"
                 android:textColor="@color/colorGray"

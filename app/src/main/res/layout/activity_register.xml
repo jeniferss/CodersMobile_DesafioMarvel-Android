@@ -1,9 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:background="@color/colorBackground"
+    tools:context=".register.RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_171_dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_22_dp"
+            android:layout_marginEnd="@dimen/dim_22_dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/dim_15_dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_103_dp"
+                android:backgroundTint="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dim_15_dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_18_dp"
+                    android:layout_marginTop="@dimen/dim_37_dp"
+                    android:layout_marginEnd="@dimen/dim_18_dp"
+                    android:hint="@string/name"
+                    app:hintTextColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_18_dp"
+                    android:layout_marginTop="@dimen/dim_120_dp"
+                    android:layout_marginEnd="@dimen/dim_18_dp"
+                    android:hint="@string/email"
+                    app:hintTextColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorGray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_18_dp"
+                    android:layout_marginTop="@dimen/dim_200_dp"
+                    android:layout_marginEnd="@dimen/dim_18_dp"
+                    android:hint="@string/senha"
+                    app:hintTextColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorGray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_18_dp"
+                    android:layout_marginTop="@dimen/dim_296_dp"
+                    android:layout_marginEnd="@dimen/dim_18_dp"
+                    android:layout_marginBottom="@dimen/dim_16_dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_21_sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dim_150_dp"
+        android:layout_height="@dimen/dim_150_dp"
+        android:layout_marginTop="@dimen/dim_100_dp"
+        android:padding="@dimen/dim_27_dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorWhite"
+        android:src="@drawable/icon_register"
+         />
+</FrameLayout>

@@ -2,8 +2,10 @@
     <string name="app_name">DesafioMarvelAndroid</string>
     <string name="email">Email</string>
     <string name="welcome">Welcome to the Marvel HQ\'s</string>
-    <string name="senha">Senha</string>
+    <string name="senha">Password</string>
     <string name="remember">Remember</string>
     <string name="log_in">LOG IN</string>
     <string name="create_account">Create account</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
 </resources>
