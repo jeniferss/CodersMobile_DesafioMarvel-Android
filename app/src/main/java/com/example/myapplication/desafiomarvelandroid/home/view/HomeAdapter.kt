@@ -6,10 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.desafiomarvelandroid.R
 import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 
-class HomeAdapter (private var _comics: MutableList<ComicModel>,
-private val _listener: (ComicModel) -> Unit
+class HomeAdapter(
+    private var _comics: MutableList<ComicModel>,
+    private val _listener: (ComicModel) -> Unit
 ) :
-RecyclerView.Adapter<HomeViewHolder>() {
+    RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         val view =

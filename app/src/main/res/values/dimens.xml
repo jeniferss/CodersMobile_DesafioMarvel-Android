@@ -50,4 +50,6 @@
     <dimen name="dim_40_dp">40dp</dimen>
     <dimen name="dim_280_dp">280dp</dimen>
     <dimen name="dim_90_dp">90dp</dimen>
+    <dimen name="dim_2_dp">2dp</dimen>
+    <dimen name="dim_230_dp">230dp</dimen>
 </resources>

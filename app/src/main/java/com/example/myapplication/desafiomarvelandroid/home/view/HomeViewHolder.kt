@@ -9,7 +9,7 @@ import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.comic_item.view.*
 
-class HomeViewHolder (private val view: View) : RecyclerView.ViewHolder(view) {
+class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
     val imgHome = view.findViewById<ImageView>(R.id.imgComicHome)
     val txtHome = view.findViewById<TextView>(R.id.txtComicHome)

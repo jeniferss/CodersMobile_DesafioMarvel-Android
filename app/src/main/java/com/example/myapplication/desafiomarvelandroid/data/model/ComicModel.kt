@@ -7,7 +7,7 @@ data class ComicModel(
     val description: String,
     val thumbnail: ComicImageModel,
     val dates: List<ComicDateModel>,
-    val pageCount : Int,
+    val pageCount: Int,
     val images: List<ComicImageModel>,
     val prices: List<ComicPriceModel>
 )

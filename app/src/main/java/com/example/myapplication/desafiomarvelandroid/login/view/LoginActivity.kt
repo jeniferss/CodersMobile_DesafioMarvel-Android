@@ -39,7 +39,6 @@ class LoginActivity : AppCompatActivity() {
                 SEGUIR = false
             }
         }
-
     }
 
     fun checarEntradas(email: String, senha: String) {

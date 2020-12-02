@@ -5,7 +5,7 @@ import okhttp3.Response
 import java.math.BigInteger
 import java.security.MessageDigest
 
-class ExtensionsAPI: Interceptor {
+class ExtensionsAPI : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
 

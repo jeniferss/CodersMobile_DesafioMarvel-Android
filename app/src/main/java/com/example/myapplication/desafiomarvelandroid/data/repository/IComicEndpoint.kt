@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface IComicEndpoint {
 
-    @GET("v1/public/comics")
+    @GET("v1/public/characters/1009610/comics")
     suspend fun obterComics(): ResponseModel<ComicModel>
 
     companion object {

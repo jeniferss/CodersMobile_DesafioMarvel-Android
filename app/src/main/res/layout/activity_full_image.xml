@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context=".fullimage.view.FullImageActivity">
 
     <ImageView
@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dim_10_dp"
-        android:src="@drawable/ic_baseline_close_24"/>
+        android:src="@drawable/ic_baseline_close_24" />
 
     <ImageView
         android:id="@+id/imgFull"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/dim_20_dp"/>
+        android:layout_margin="@dimen/dim_20_dp" />
 
 </LinearLayout>
