@@ -17,10 +17,15 @@ class DetailActivity : AppCompatActivity() {
         val nome = intent.getStringExtra("NOME")
         val descricao = intent.getStringExtra("DESCRICAO")
         val imagem = intent.getStringExtra("IMAGE")
-        val data = intent.getStringExtra("DATA")
+        val qtdPages = intent.getIntExtra("QTD_PAGINAS", 0)
+        val price = intent.getFloatExtra("PRICE", 0F)
+        val date = intent.getStringExtra("DATE")
 
         findViewById<TextView>(R.id.txtTitle).text = nome
         findViewById<TextView>(R.id.txtDescricao).text = descricao
+        findViewById<TextView>(R.id.txtQtdPages).text = qtdPages.toString()
+        findViewById<TextView>(R.id.txtData).text = date
+        findViewById<TextView>(R.id.txtPrice).text = price.toString()
 
         Picasso.get()
             .load(imagem)

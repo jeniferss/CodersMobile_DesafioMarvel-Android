@@ -4,8 +4,8 @@ data class ComicImageModel(
     var path: String,
     var extension: String,
 ){
-    fun setarFullPath(): String{
-        return path+"/portrait_small."+extension.replace("http://", "https://")
+    fun setarFullPath(size: String? = "detail"): String {
+        return "$path/$size.$extension".replace("http://", "https://")
     }
 }
 

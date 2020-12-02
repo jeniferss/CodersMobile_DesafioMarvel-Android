@@ -1,4 +1,4 @@
-package com.example.myapplication.desafiomarvelandroid.data.api
+package com.example.myapplication.desafiomarvelandroid.data.model
 
 data class ResponseModel <T>(
     val code: Int?,

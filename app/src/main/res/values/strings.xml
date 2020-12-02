@@ -10,6 +10,6 @@
     <string name="name">Name</string>
     <string name="hashtag">#</string>
     <string name="published">Published:</string>
-    <string name="price">Price:</string>
+    <string name="price">Price: $</string>
     <string name="pages">Pages:</string>
 </resources>

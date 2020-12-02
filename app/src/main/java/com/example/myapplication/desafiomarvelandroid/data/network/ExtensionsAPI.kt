@@ -1,4 +1,4 @@
-package com.example.myapplication.desafiomarvelandroid.data.extensions
+package com.example.myapplication.desafiomarvelandroid.data.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

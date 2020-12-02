@@ -28,11 +28,19 @@ class MainActivity : AppCompatActivity() {
         _listaComics = mutableListOf()
 
         _homeAdapter = HomeAdapter(_listaComics) {
+
+            val indexPrice = it.prices.lastIndex
+            val price = it.prices[indexPrice].price
+
+            val date = it.dates[0].date.toString()
+
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("NOME", it.title)
             intent.putExtra("DESCRICAO", it.description)
-            intent.putExtra("IMAGE", it.thumbnail.path+"/portrait_small."+it.thumbnail.extension)
+            intent.putExtra("IMAGE", it.thumbnail.setarFullPath())
             intent.putExtra("QTD_PAGINAS", it.pageCount)
+            intent.putExtra("PRICE", price)
+            intent.putExtra("DATE", date)
             startActivity(intent)
         }
 
@@ -50,33 +58,6 @@ class MainActivity : AppCompatActivity() {
         _viewModel.obterComics().observe(this, {
             exibirResultados(it)
         })
-
-        setScrollView()
-    }
-
-    private fun setScrollView() {
-        findViewById<RecyclerView>(R.id.listComic).addOnScrollListener(object :
-            RecyclerView.OnScrollListener() {
-
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-
-                val target = recyclerView.layoutManager as GridLayoutManager?
-
-                val totalItemCount = target!!.itemCount
-
-                val lastVisible = target.findLastVisibleItemPosition()
-
-                val lastItem = lastVisible + 5 >= totalItemCount
-
-                if (totalItemCount > 0 && lastItem) {
-                    _viewModel.proximaPagina().observe(this@MainActivity, {
-                        exibirResultados(it)
-                    })
-                }
-            }
-        })
-
     }
 
     private fun exibirResultados(lista: List<ComicModel>?) {

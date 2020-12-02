@@ -16,7 +16,7 @@ class HomeViewHolder (private val view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(comicModel: ComicModel) {
 
-        txtHome.text = comicModel.id.toString()
+        txtHome.text = comicModel.issueNumber.toString()
 
         Picasso.get()
             .load(comicModel.thumbnail.setarFullPath())

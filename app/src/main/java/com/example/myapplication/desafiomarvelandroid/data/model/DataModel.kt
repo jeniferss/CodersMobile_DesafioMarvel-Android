@@ -1,4 +1,4 @@
-package com.example.myapplication.desafiomarvelandroid.data.api
+package com.example.myapplication.desafiomarvelandroid.data.model
 import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 
 data class DataModel<T> (

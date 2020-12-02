@@ -1,6 +1,5 @@
 package com.example.myapplication.desafiomarvelandroid.data.network
 
-import com.example.myapplication.desafiomarvelandroid.data.extensions.ExtensionsAPI
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
