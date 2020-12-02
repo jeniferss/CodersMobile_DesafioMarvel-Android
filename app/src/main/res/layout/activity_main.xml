@@ -5,12 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context=".home.view.MainActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_50_dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="@dimen/dim_100_dp"
+            android:layout_height="@dimen/dim_50_dp"
+            android:src="@drawable/marvel_logo" />
+    </Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listComic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/comic_item"/>
+        tools:listitem="@layout/comic_item" />
 
 </LinearLayout>

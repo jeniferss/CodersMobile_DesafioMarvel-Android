@@ -20,7 +20,7 @@ class DetailActivity : AppCompatActivity() {
         val qtdPages = intent.getIntExtra("QTD_PAGINAS", 0)
         val price = intent.getFloatExtra("PRICE", 0F)
         val date = intent.getStringExtra("DATE")
-
+        val imgBackground = intent.getStringExtra("IMAGE_BACKGROUND")
         findViewById<TextView>(R.id.txtTitle).text = nome
         findViewById<TextView>(R.id.txtDescricao).text = descricao
         findViewById<TextView>(R.id.txtQtdPages).text = qtdPages.toString()
@@ -30,6 +30,10 @@ class DetailActivity : AppCompatActivity() {
         Picasso.get()
             .load(imagem)
             .into(findViewById<ImageView>(R.id.imgComicMini))
+
+        Picasso.get()
+            .load(imgBackground)
+            .into(findViewById<ImageView>(R.id.imgBackground))
 
         findViewById<ImageView>(R.id.btnBack).setOnClickListener {
             finish()

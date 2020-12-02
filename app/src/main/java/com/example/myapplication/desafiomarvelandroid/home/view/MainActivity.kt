@@ -1,6 +1,7 @@
 package com.example.myapplication.desafiomarvelandroid.home.view
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -11,6 +12,7 @@ import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 import com.example.myapplication.desafiomarvelandroid.data.repository.ComicRepository
 import com.example.myapplication.desafiomarvelandroid.detail.view.DetailActivity
 import com.example.myapplication.desafiomarvelandroid.home.viewmodel.HomeViewModel
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +23,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setIcon(R.drawable.marvel_logo)
+        supportActionBar?.setDisplayUseLogoEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val comicRecycler = findViewById<RecyclerView>(R.id.listComic)
         val manager = GridLayoutManager(this, 3)
@@ -34,11 +41,15 @@ class MainActivity : AppCompatActivity() {
 
             val date = it.dates[0].date.toString()
 
+            val maxIndex = (it.images.size)
+            val indexImage = Random.nextInt(maxIndex)
+
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("NOME", it.title)
             intent.putExtra("DESCRICAO", it.description)
             intent.putExtra("IMAGE", it.thumbnail.setarFullPath())
             intent.putExtra("QTD_PAGINAS", it.pageCount)
+            intent.putExtra("IMAGE_BACKGROUND", it.images[indexImage].setarFullPath())
             intent.putExtra("PRICE", price)
             intent.putExtra("DATE", date)
             startActivity(intent)

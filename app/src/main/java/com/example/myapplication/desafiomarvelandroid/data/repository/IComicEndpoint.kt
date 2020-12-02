@@ -4,7 +4,6 @@ import com.example.myapplication.desafiomarvelandroid.data.model.ResponseModel
 import com.example.myapplication.desafiomarvelandroid.data.network.NetworkUtils
 import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface IComicEndpoint {
 

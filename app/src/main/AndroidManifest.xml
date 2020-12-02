@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fullimage.view.FullImageActivity"></activity>
+        <activity android:name=".fullimage.view.FullImageActivity"/>
         <activity android:name=".detail.view.DetailActivity" />
         <activity
             android:name=".register.view.RegisterActivity"

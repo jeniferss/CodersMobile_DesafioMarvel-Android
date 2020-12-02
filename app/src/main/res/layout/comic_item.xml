@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_margin="@dimen/dim_10_dp"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dim_10_dp">
+
     <ImageView
         android:id="@+id/imgComicHome"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_200_dp" />
+        android:layout_height="@dimen/dim_150_dp"
+        android:layout_margin="@dimen/dim_5dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/dim_165_dp"
         android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:background="@color/colorBackground"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:text="@string/hashtag"
-        android:padding="@dimen/dim_10_dp"
-        android:textSize="@dimen/dim_15_sp"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:padding="@dimen/dim_5dp"
+            android:text="@string/hashtag"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_15_sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtComicHome"
-        android:layout_width="0dp"
-        android:background="@color/colorBackground"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:padding="@dimen/dim_10_dp"
-        android:textSize="@dimen/dim_15_sp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/txtComicHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:padding="@dimen/dim_5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_15_sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
