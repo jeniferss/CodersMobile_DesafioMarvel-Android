@@ -9,13 +9,32 @@ import kotlinx.coroutines.Dispatchers
 
 class HomeViewModel(private val _repository: ComicRepository) : ViewModel() {
 
+    private var _page = 0
+    private var _total: Int = 0
+    private var _count: Int = 0
     private var _comics: List<ComicModel> = listOf()
 
     fun obterComics() = liveData(Dispatchers.IO) {
 
         val response = _repository.obterComics()
+        _count = response.data.count
+
+        if(response.data.total > 0){
+            _total = response.data.total / _count
+        } else _total = 0
+
         _comics = response.data.results
         emit(response.data.results)
+    }
+
+    fun proximaPagina() = liveData(Dispatchers.IO) {
+
+        if (_page + _count <= _total) {
+            _page = _page + _count
+
+            val response = _repository.obterComics(_page)
+            emit(response.data.results)
+        }
     }
 
     class HomeViewModelFactory(

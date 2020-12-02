@@ -60,11 +60,37 @@ class MainActivity : AppCompatActivity() {
         _viewModel.obterComics().observe(this, {
             exibirResultados(it)
         })
+
+        setScrollView()
     }
 
     private fun exibirResultados(lista: List<ComicModel>?) {
         lista?.let { _listaComics.addAll(it) }
         _homeAdapter.notifyDataSetChanged()
+    }
+
+    private fun setScrollView() {
+        findViewById<RecyclerView>(R.id.listComic).addOnScrollListener(object :
+            RecyclerView.OnScrollListener() {
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                val target = recyclerView.layoutManager as GridLayoutManager?
+
+                val totalItemCount = target!!.itemCount
+
+                val lastVisible = target.findLastVisibleItemPosition()
+
+                val lastItem = lastVisible + 5 >= totalItemCount
+
+                if (totalItemCount > 0 && lastItem) {
+                    _viewModel.proximaPagina().observe(this@MainActivity, {
+                        exibirResultados(it)
+                    })
+                }
+            }
+        })
     }
 }
 
