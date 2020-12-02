@@ -21,6 +21,7 @@ class DetailActivity : AppCompatActivity() {
         val price = intent.getFloatExtra("PRICE", 0F)
         val date = intent.getStringExtra("DATE")
         val imgBackground = intent.getStringExtra("IMAGE_BACKGROUND")
+
         findViewById<TextView>(R.id.txtTitle).text = nome
         findViewById<TextView>(R.id.txtDescricao).text = descricao
         findViewById<TextView>(R.id.txtQtdPages).text = qtdPages.toString()

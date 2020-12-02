@@ -45,4 +45,9 @@
     <dimen name="dim_165_dp">165dp</dimen>
     <dimen name="dim_190_dp">190dp</dimen>
     <dimen name="dim_20_sp">20sp</dimen>
+    <dimen name="dim_140_dp">140dp</dimen>
+    <dimen name="dim_260_dp">260dp</dimen>
+    <dimen name="dim_40_dp">40dp</dimen>
+    <dimen name="dim_280_dp">280dp</dimen>
+    <dimen name="dim_90_dp">90dp</dimen>
 </resources>

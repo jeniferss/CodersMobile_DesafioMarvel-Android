@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,143 +7,160 @@
     android:background="@color/colorBackground"
     tools:context=".detail.view.DetailActivity">
 
-    <ImageView
-        android:id="@+id/imgBackground"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_200_dp" />
-
-    <ImageView
-        android:id="@+id/imgComicMini"
-        android:layout_width="@dimen/dim_150_dp"
-        android:layout_height="@dimen/dim_200_dp"
-        android:layout_marginStart="@dimen/dim_10_dp"
-        android:layout_marginTop="@dimen/dim_83_dp" />
-
-    <ImageView
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dim_10_dp"
-        android:src="@drawable/ic_baseline_arrow_back_24" />
-
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_320_dp"
-        android:isScrollContainer="true"
-        android:orientation="vertical">
+        android:background="@color/colorBackground">
 
-        <TextView
-            android:id="@+id/txtTitle"
+        <ImageView
+            android:id="@+id/imgBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dim_10_dp"
-            android:layout_marginEnd="@dimen/dim_10_dp"
-            android:maxLines="2"
-            android:textAllCaps="true"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_25_sp"
-            android:textStyle="bold" />
+            android:layout_height="@dimen/dim_200_dp" />
 
-        <TextView
-            android:id="@+id/txtDescricao"
-            android:layout_width="match_parent"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/dim_150_dp"
+            android:layout_height="@dimen/dim_200_dp"
+            android:layout_marginStart="@dimen/dim_15_dp"
+            android:layout_marginTop="@dimen/dim_83_dp">
+
+            <ImageView
+                android:id="@+id/imgComicMini"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dim_5dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dim_10_dp"
-            android:layout_marginEnd="@dimen/dim_10_dp"
-            android:layout_marginTop="@dimen/dim_10_dp"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_15_sp"
-            android:textStyle="normal" />
+            android:layout_margin="@dimen/dim_10_dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dim_10_dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/dim_320_dp"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorBackground"
-                android:text="@string/published"
+                android:layout_marginStart="@dimen/dim_20_dp"
+                android:layout_marginEnd="@dimen/dim_20_dp"
+                android:maxLines="2"
+                android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_15_sp"
+                android:textSize="@dimen/dim_25_sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtData"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorBackground"
-                android:maxLines="1"
-                android:layout_marginStart="@dimen/dim_5dp"
+                android:id="@+id/txtDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20_dp"
+                android:layout_marginTop="@dimen/dim_20_dp"
+                android:layout_marginEnd="@dimen/dim_20_dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/dim_15_sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20_dp"
+                android:layout_marginTop="@dimen/dim_20_dp"
+                android:layout_marginEnd="@dimen/dim_20_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:text="@string/published"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtData"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackground"
+                    android:maxLines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20_dp"
+                android:layout_marginEnd="@dimen/dim_20_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:text="@string/price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackground"
+                    android:maxLines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_20_dp"
+                android:layout_marginEnd="@dimen/dim_20_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:text="@string/pages"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtQtdPages"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackground"
+                    android:maxLines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15_sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dim_10_dp"
-            android:orientation="horizontal">
+    </FrameLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorBackground"
-                android:text="@string/price"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_15_sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPrice"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorBackground"
-                android:maxLines="1"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_15_sp"
-                android:layout_marginStart="@dimen/dim_5dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dim_10_dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorBackground"
-                android:text="@string/pages"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_15_sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtQtdPages"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorBackground"
-                android:maxLines="1"
-                android:layout_marginStart="@dimen/dim_5dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_15_sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</FrameLayout>
+</ScrollView>

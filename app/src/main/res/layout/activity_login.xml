@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_30_dp"
+            android:layout_marginTop="@dimen/dim_20_dp"
             android:gravity="center"
             android:text="@string/welcome"
             android:textColor="@color/colorWhite"
@@ -32,7 +32,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_83_dp"
+            android:layout_marginTop="@dimen/dim_70_dp"
             android:background="@color/colorAccent"
             app:cardCornerRadius="@dimen/dim_15_dp">
 
@@ -40,13 +40,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_18_dp"
-                android:layout_marginTop="@dimen/dim_54_dp"
+                android:layout_marginTop="@dimen/dim_20_dp"
                 android:layout_marginEnd="@dimen/dim_18_dp"
                 android:hint="@string/email"
                 app:boxBackgroundColor="@color/colorTransparent"
                 app:hintTextColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -58,13 +59,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_18_dp"
-                android:layout_marginTop="@dimen/dim_120_dp"
+                android:layout_marginTop="@dimen/dim_90_dp"
                 android:layout_marginEnd="@dimen/dim_18_dp"
                 android:hint="@string/senha"
                 app:boxBackgroundColor="@color/colorTransparent"
                 app:hintTextColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/senhaLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -76,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_18_dp"
-                android:layout_marginTop="@dimen/dim_190_dp"
+                android:layout_marginTop="@dimen/dim_150_dp"
                 android:layout_marginEnd="@dimen/dim_18_dp"
                 android:text="@string/remember"
                 android:textColor="@color/colorGray"
@@ -87,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_18_dp"
-                android:layout_marginTop="@dimen/dim_296_dp"
+                android:layout_marginTop="@dimen/dim_220_dp"
                 android:layout_marginEnd="@dimen/dim_18_dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/log_in"
@@ -98,8 +100,8 @@
                 android:id="@+id/btnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_365_dp"
-                android:layout_marginBottom="@dimen/dim_30_dp"
+                android:layout_marginTop="@dimen/dim_280_dp"
+                android:layout_marginBottom="@dimen/dim_20_dp"
                 android:gravity="center"
                 android:text="@string/create_account"
                 android:textColor="@color/colorGray"

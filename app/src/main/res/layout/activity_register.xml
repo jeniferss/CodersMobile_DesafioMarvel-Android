@@ -23,7 +23,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_103_dp"
+                android:layout_marginTop="@dimen/dim_70_dp"
                 android:backgroundTint="@color/colorWhite"
                 app:cardCornerRadius="@dimen/dim_15_dp">
 
@@ -31,13 +31,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dim_18_dp"
-                    android:layout_marginTop="@dimen/dim_37_dp"
+                    android:layout_marginTop="@dimen/dim_20_dp"
                     android:layout_marginEnd="@dimen/dim_18_dp"
                     android:hint="@string/name"
                     app:boxBackgroundColor="@color/colorTransparent"
                     app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorGray" />
@@ -48,13 +49,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dim_18_dp"
-                    android:layout_marginTop="@dimen/dim_100_dp"
+                    android:layout_marginTop="@dimen/dim_83_dp"
                     android:layout_marginEnd="@dimen/dim_18_dp"
                     android:hint="@string/email"
                     app:boxBackgroundColor="@color/colorTransparent"
                     app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailResgister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
@@ -66,13 +68,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dim_18_dp"
-                    android:layout_marginTop="@dimen/dim_165_dp"
+                    android:layout_marginTop="@dimen/dim_150_dp"
                     android:layout_marginEnd="@dimen/dim_18_dp"
                     android:hint="@string/senha"
                     app:boxBackgroundColor="@color/colorTransparent"
                     app:hintTextColor="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/senhaRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
@@ -85,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dim_18_dp"
-                    android:layout_marginTop="@dimen/dim_296_dp"
+                    android:layout_marginTop="@dimen/dim_250_dp"
                     android:layout_marginEnd="@dimen/dim_18_dp"
                     android:layout_marginBottom="@dimen/dim_16_dp"
                     android:background="@color/colorPrimary"
@@ -103,7 +106,8 @@
         android:layout_width="@dimen/dim_150_dp"
         android:layout_height="@dimen/dim_150_dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dim_100_dp"
+        android:layout_marginTop="@dimen/dim_90_dp"
+        android:padding="@dimen/dim_20_dp"
         android:src="@drawable/icon_register"
         app:civ_circle_background_color="@color/colorWhite" />
 

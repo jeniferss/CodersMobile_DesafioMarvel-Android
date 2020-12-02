@@ -8,6 +8,11 @@ import com.example.myapplication.desafiomarvelandroid.R
 import com.example.myapplication.desafiomarvelandroid.home.view.MainActivity
 import com.example.myapplication.desafiomarvelandroid.home.viewmodel.HomeViewModel
 import com.example.myapplication.desafiomarvelandroid.register.view.RegisterActivity
+import com.example.myapplication.desafiomarvelandroid.register.view.SEGUIR
+import com.google.android.material.textfield.TextInputEditText
+
+var SEGUIR = false
+const val ERRO = "CAMPO VAZIO"
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +25,34 @@ class LoginActivity : AppCompatActivity() {
         }
 
         findViewById<TextView>(R.id.btnLogin).setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+            val email = findViewById<TextInputEditText>(R.id.emailLogin).text.toString()
+            val senha = findViewById<TextInputEditText>(R.id.senhaLogin).text.toString()
+
+            checarEntradas(email, senha)
+
+            if (SEGUIR == true) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+                clear()
+                SEGUIR = false
+            }
         }
 
+    }
+
+    fun checarEntradas(email: String, senha: String) {
+
+        if (email.trim().isEmpty()) {
+            findViewById<TextInputEditText>(R.id.emailLogin).error = ERRO
+        } else if (senha.trim().isEmpty()) {
+            findViewById<TextInputEditText>(R.id.senhaLogin).error = ERRO
+        } else SEGUIR = true
+    }
+
+    fun clear() {
+        findViewById<TextInputEditText>(R.id.emailLogin).text?.clear()
+        findViewById<TextInputEditText>(R.id.senhaLogin).text?.clear()
     }
 }
