@@ -11,23 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".register.RegisterActivity"
-            android:theme="@style/AppThemeActionBar"
-            android:label="Register"/>
-
-        <activity android:name=".login.LoginActivity" />
-
+        <activity android:name=".fullimage.view.FullImageActivity"></activity>
+        <activity android:name=".detail.view.DetailActivity" />
         <activity
-            android:name=".splashscreen.view.SplashScreenActivity">
+            android:name=".register.view.RegisterActivity"
+            android:label="Register"
+            android:theme="@style/AppThemeActionBar" />
+        <activity android:name=".login.view.LoginActivity" />
+        <activity android:name=".splashscreen.view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.MainActivity" />
-
+        <activity android:name=".home.view.MainActivity" />
     </application>
 
 </manifest>

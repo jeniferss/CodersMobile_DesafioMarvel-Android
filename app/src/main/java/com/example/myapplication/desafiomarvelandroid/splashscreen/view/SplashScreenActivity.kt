@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.myapplication.desafiomarvelandroid.home.MainActivity
 import com.example.myapplication.desafiomarvelandroid.R
-import com.example.myapplication.desafiomarvelandroid.login.LoginActivity
+import com.example.myapplication.desafiomarvelandroid.login.view.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

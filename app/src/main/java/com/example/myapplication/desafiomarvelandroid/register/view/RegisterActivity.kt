@@ -1,4 +1,4 @@
-package com.example.myapplication.desafiomarvelandroid.register
+package com.example.myapplication.desafiomarvelandroid.register.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

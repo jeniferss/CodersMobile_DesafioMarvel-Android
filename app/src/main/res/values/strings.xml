@@ -8,4 +8,8 @@
     <string name="create_account">Create account</string>
     <string name="save">Save</string>
     <string name="name">Name</string>
+    <string name="hashtag">#</string>
+    <string name="published">Published:</string>
+    <string name="price">Price:</string>
+    <string name="pages">Pages:</string>
 </resources>

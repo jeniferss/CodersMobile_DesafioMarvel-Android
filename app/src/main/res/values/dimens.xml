@@ -30,4 +30,12 @@
     <dimen name="dim_27_dp">27dp</dimen>
     <dimen name="dim_150_dp">150dp</dimen>
     <dimen name="dim_103_dp">103dp</dimen>
+    <dimen name="dim_10_dp">10dp</dimen>
+    <dimen name="dim_35_sp">35sp</dimen>
+    <dimen name="dim_20_dp">20dp</dimen>
+    <dimen name="dim_25_sp">25sp</dimen>
+    <dimen name="dim_320_dp">320dp</dimen>
+    <dimen name="dim_450_dp">450dp</dimen>
+    <dimen name="dim_360_dp">360dp</dimen>
+    <dimen name="dim_420_dp">420dp</dimen>
 </resources>
