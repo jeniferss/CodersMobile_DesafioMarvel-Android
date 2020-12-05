@@ -7,19 +7,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.desafiomarvelandroid.R
 import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.comic_item.view.*
 
-class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+class HomeViewHolder(private var view: View) : RecyclerView.ViewHolder(view) {
 
-    val imgHome = view.findViewById<ImageView>(R.id.imgComicHome)
-    val txtHome = view.findViewById<TextView>(R.id.txtComicHome)
+    private val _imgHome = view.findViewById<ImageView>(R.id.imgComicHome)
+    private val _txtHome = view.findViewById<TextView>(R.id.txtComicHome)
 
     fun bind(comicModel: ComicModel) {
 
-        txtHome.text = comicModel.issueNumber.toString()
+        _txtHome.text = comicModel.issueNumber.toString()
 
         Picasso.get()
             .load(comicModel.thumbnail.setarFullPath())
-            .into(imgHome)
+            .into(_imgHome)
     }
 }

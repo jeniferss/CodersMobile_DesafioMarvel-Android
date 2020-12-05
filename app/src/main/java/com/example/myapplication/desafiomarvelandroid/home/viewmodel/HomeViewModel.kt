@@ -30,7 +30,7 @@ class HomeViewModel(private val _repository: ComicRepository) : ViewModel() {
     fun proximaPagina() = liveData(Dispatchers.IO) {
 
         if (_page + _count <= _total) {
-            _page = _page + _count
+            _page += _count
 
             val response = _repository.obterComics(_page)
             emit(response.data.results)

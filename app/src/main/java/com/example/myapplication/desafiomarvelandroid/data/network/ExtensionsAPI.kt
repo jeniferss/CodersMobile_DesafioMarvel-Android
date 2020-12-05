@@ -10,15 +10,15 @@ class ExtensionsAPI : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val ts = System.currentTimeMillis().toString()
-        val apikey = _PUBLIC_KEY
+        val apikey = PUBLIC_KEY
 
         var request = chain.request()
         val originalHttpUrl = request.url()
 
         val url = originalHttpUrl.newBuilder()
-            .addQueryParameter(_TS, ts)
-            .addQueryParameter(_API_KEY, apikey)
-            .addQueryParameter(_HASH, getHash(ts))
+            .addQueryParameter(TS, ts)
+            .addQueryParameter(API_KEY, apikey)
+            .addQueryParameter(HASH, getHash(ts))
             .build()
 
         val requestBuilder = request.newBuilder().url(url)
@@ -26,7 +26,7 @@ class ExtensionsAPI : Interceptor {
         return chain.proceed(request)
     }
 
-    private fun getHash(ts: String) = "${ts}$_PRIVATE_KEY$_PUBLIC_KEY".md5
+    private fun getHash(ts: String) = "${ts}$PRIVATE_KEY$PUBLIC_KEY".md5
 
     private val String.md5: String
         get() {
@@ -37,12 +37,12 @@ class ExtensionsAPI : Interceptor {
         }
 
     companion object {
-        private const val _TS = "ts"
-        private const val _API_KEY = "apikey"
-        private const val _HASH = "hash"
+        private const val TS = "ts"
+        private const val API_KEY = "apikey"
+        private const val HASH = "hash"
 
-        private const val _PRIVATE_KEY = "7376c89ad8fe91725aef0b497a9953f744fe17e8"
-        private const val _PUBLIC_KEY = "7d90a27844a682faf5f6aa601376b0ba"
+        private const val PRIVATE_KEY = "7376c89ad8fe91725aef0b497a9953f744fe17e8"
+        private const val PUBLIC_KEY = "7d90a27844a682faf5f6aa601376b0ba"
 
         fun String.md5(): String {
             val md = MessageDigest.getInstance("MD5")

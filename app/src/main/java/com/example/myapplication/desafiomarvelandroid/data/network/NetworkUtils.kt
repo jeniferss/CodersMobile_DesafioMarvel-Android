@@ -10,7 +10,7 @@ class NetworkUtils {
 
         private const val BASE_URL = "https://gateway.marvel.com/"
 
-        val gson = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss-SSSS").create()
+        private val gson = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss-SSSS").create()
 
         fun getRetrofitInstance(): Retrofit {
             val client = OkHttpClient

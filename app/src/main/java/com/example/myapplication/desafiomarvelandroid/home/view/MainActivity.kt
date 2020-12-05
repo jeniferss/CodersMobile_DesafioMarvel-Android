@@ -1,7 +1,6 @@
 package com.example.myapplication.desafiomarvelandroid.home.view
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -12,7 +11,6 @@ import com.example.myapplication.desafiomarvelandroid.data.model.ComicModel
 import com.example.myapplication.desafiomarvelandroid.data.repository.ComicRepository
 import com.example.myapplication.desafiomarvelandroid.detail.view.DetailActivity
 import com.example.myapplication.desafiomarvelandroid.home.viewmodel.HomeViewModel
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 

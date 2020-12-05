@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
 
             checarEntradas(nome, email, senha)
 
-            if (SEGUIR == true) {
+            if (SEGUIR) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -41,7 +41,7 @@ class RegisterActivity : AppCompatActivity() {
         return true
     }
 
-    fun checarEntradas(nome: String, email: String, senha: String) {
+    private fun checarEntradas(nome: String, email: String, senha: String) {
         if (nome.trim().isEmpty()) {
             findViewById<TextInputEditText>(R.id.name).error = ERRO
         } else if (email.trim().isEmpty()) {
@@ -51,7 +51,7 @@ class RegisterActivity : AppCompatActivity() {
         } else SEGUIR = true
     }
 
-    fun clear() {
+    private fun clear() {
         findViewById<TextInputEditText>(R.id.name).text?.clear()
         findViewById<TextInputEditText>(R.id.emailResgister).text?.clear()
         findViewById<TextInputEditText>(R.id.senhaRegister).text?.clear()

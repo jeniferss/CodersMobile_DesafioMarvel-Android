@@ -6,12 +6,10 @@ import android.os.Bundle
 import android.widget.TextView
 import com.example.myapplication.desafiomarvelandroid.R
 import com.example.myapplication.desafiomarvelandroid.home.view.MainActivity
-import com.example.myapplication.desafiomarvelandroid.home.viewmodel.HomeViewModel
 import com.example.myapplication.desafiomarvelandroid.register.view.RegisterActivity
-import com.example.myapplication.desafiomarvelandroid.register.view.SEGUIR
 import com.google.android.material.textfield.TextInputEditText
 
-var SEGUIR = false
+var SEGUIR_L = false
 const val ERRO = "CAMPO VAZIO"
 
 class LoginActivity : AppCompatActivity() {
@@ -31,26 +29,26 @@ class LoginActivity : AppCompatActivity() {
 
             checarEntradas(email, senha)
 
-            if (SEGUIR == true) {
+            if (SEGUIR_L) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
                 clear()
-                SEGUIR = false
+                SEGUIR_L = false
             }
         }
     }
 
-    fun checarEntradas(email: String, senha: String) {
+    private fun checarEntradas(email: String, senha: String) {
 
         if (email.trim().isEmpty()) {
             findViewById<TextInputEditText>(R.id.emailLogin).error = ERRO
         } else if (senha.trim().isEmpty()) {
             findViewById<TextInputEditText>(R.id.senhaLogin).error = ERRO
-        } else SEGUIR = true
+        } else SEGUIR_L = true
     }
 
-    fun clear() {
+    private fun clear() {
         findViewById<TextInputEditText>(R.id.emailLogin).text?.clear()
         findViewById<TextInputEditText>(R.id.senhaLogin).text?.clear()
     }
